@@ -26,10 +26,10 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     </style>
 </head>
-<body class="font-body text-on-surface">
+<body class="font-body text-on-surface overflow-x-hidden">
 
 <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-4 bg-[#f1f1e9]">
-    <a href="index.html" class="text-lg md:text-2xl font-bold tracking-tighter text-stone-800 font-headline">BIL</a>
+    <a href="index.html" class="text-lg md:text-2xl font-bold tracking-tighter text-stone-800 font-headline"><span class="md:hidden">BIL</span><span class="hidden md:inline">Brownie Intelligence Labs</span></a>
     <div class="flex items-center gap-4 md:gap-12">
         <a class="text-stone-500 font-medium font-label uppercase tracking-widest text-[10px] md:text-xs hover:text-purple-500 transition-colors" href="index.html">Labs</a>
         <a class="text-green-600 border-b-2 border-green-500 font-bold font-label uppercase tracking-widest text-[10px] md:text-xs" href="journey.html">Journey</a>
@@ -38,11 +38,11 @@
     </div>
 </nav>
 
-<main class="pt-32 pb-24 px-8 max-w-6xl mx-auto">
+<main class="pt-32 pb-24 px-4 md:px-8 max-w-6xl mx-auto">
     <header class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div class="max-w-2xl">
             <div class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-label uppercase tracking-widest rounded-full mb-4">Career Blueprint v2.0</div>
-            <h1 class="text-6xl md:text-8xl font-black font-headline tracking-tighter leading-none text-on-surface">
+            <h1 class="text-4xl md:text-6xl lg:text-8xl font-black font-headline tracking-tighter leading-none text-on-surface">
                 The <span class="text-primary italic">AI</span> Journey
             </h1>
             <p class="mt-8 text-xl text-on-surface-variant max-w-xl leading-relaxed">
@@ -60,10 +60,10 @@
         <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-outline-variant/20 -translate-x-1/2 hidden md:block"></div>
 
         <!-- 3Pillar -->
-        <div class="relative mb-32 flex flex-col md:flex-row items-start md:items-center">
-            <div class="md:w-1/2 md:pr-24 text-left md:text-right order-2 md:order-1">
+        <div class="relative mb-16 md:mb-32 flex flex-col md:flex-row items-start md:items-center">
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pr-24 text-left md:text-right order-2 md:order-1">
                 <div class="inline-block bg-primary text-on-primary px-4 py-1 font-label text-sm font-bold uppercase tracking-widest rounded-full mb-4 ring-4 ring-primary-container/30">Present</div>
-                <h3 class="text-3xl font-bold font-headline">Senior AI Innovation Engineer</h3>
+                <h3 class="text-2xl md:text-3xl font-bold font-headline">Senior AI Innovation Engineer</h3>
                 <p class="text-primary font-bold text-lg mb-4">3Pillar Global</p>
                 <div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-outline-variant/10">
                     <p class="text-on-surface-variant leading-relaxed">Orchestrating complex AI agent workflows using LangChain. Implementing intelligent routing between Claude 3 Opus and Sonnet models. Building deep semantic relationships using Neo4j knowledge graphs.</p>
@@ -77,17 +77,17 @@
             <div class="absolute left-8 md:left-1/2 w-12 h-12 bg-primary rounded-full -translate-x-1/2 flex items-center justify-center z-10 ring-8 ring-background order-1 md:order-2">
                 <span class="material-symbols-outlined text-on-primary">hub</span>
             </div>
-            <div class="md:w-1/2 md:pl-24 order-3"><span class="text-4xl font-black font-headline text-outline-variant/30">NOV 2025</span></div>
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pl-24 order-3"><span class="text-2xl md:text-4xl font-black font-headline text-outline-variant/30">NOV 2025</span></div>
         </div>
 
         <!-- Black & McDonald -->
-        <div class="relative mb-32 flex flex-col md:flex-row items-start md:items-center">
-            <div class="md:w-1/2 md:pr-24 text-right order-3 md:order-1"><span class="text-4xl font-black font-headline text-outline-variant/30">MAY 2025</span></div>
+        <div class="relative mb-16 md:mb-32 flex flex-col md:flex-row items-start md:items-center">
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pr-24 text-right order-3 md:order-1"><span class="text-2xl md:text-4xl font-black font-headline text-outline-variant/30">MAY 2025</span></div>
             <div class="absolute left-8 md:left-1/2 w-12 h-12 bg-surface-container-highest border-4 border-primary rounded-full -translate-x-1/2 flex items-center justify-center z-10 ring-8 ring-background order-1 md:order-2">
                 <span class="material-symbols-outlined text-primary">visibility</span>
             </div>
-            <div class="md:w-1/2 md:pl-24 order-2">
-                <h3 class="text-3xl font-bold font-headline">AI & Data Engineer</h3>
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pl-24 order-2">
+                <h3 class="text-2xl md:text-3xl font-bold font-headline">AI & Data Engineer</h3>
                 <p class="text-secondary font-bold text-lg mb-4">Black & McDonald</p>
                 <div class="bg-white p-6 rounded-xl shadow-sm border-b-4 border-secondary/20">
                     <p class="text-on-surface-variant leading-relaxed">Developed a multimodal RAG pipeline leveraging Haystack. Integrated SAM2 to automate precision fiber-optic cable placement detection from site imagery.</p>
@@ -101,9 +101,9 @@
         </div>
 
         <!-- Intuitive AI -->
-        <div class="relative mb-32 flex flex-col md:flex-row items-start md:items-center">
-            <div class="md:w-1/2 md:pr-24 text-left md:text-right order-2 md:order-1">
-                <h3 class="text-3xl font-bold font-headline">Machine Learning Engineer</h3>
+        <div class="relative mb-16 md:mb-32 flex flex-col md:flex-row items-start md:items-center">
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pr-24 text-left md:text-right order-2 md:order-1">
+                <h3 class="text-2xl md:text-3xl font-bold font-headline">Machine Learning Engineer</h3>
                 <p class="text-primary font-bold text-lg mb-4">Intuitive AI</p>
                 <div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-outline-variant/10">
                     <p class="text-on-surface-variant leading-relaxed">Edge AI deployment with YOLOv8 on NVIDIA Jetson. SAM2-assisted annotation workflows. Designed "Oscar Pocket," a mobile RAG assistant for real-time waste diversion.</p>
@@ -117,17 +117,17 @@
             <div class="absolute left-8 md:left-1/2 w-12 h-12 bg-surface-container-highest border-4 border-outline-variant rounded-full -translate-x-1/2 flex items-center justify-center z-10 ring-8 ring-background order-1 md:order-2">
                 <span class="material-symbols-outlined text-outline">memory</span>
             </div>
-            <div class="md:w-1/2 md:pl-24 order-3"><span class="text-4xl font-black font-headline text-outline-variant/30">NOV 2023</span></div>
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pl-24 order-3"><span class="text-2xl md:text-4xl font-black font-headline text-outline-variant/30">NOV 2023</span></div>
         </div>
 
         <!-- RBC -->
-        <div class="relative mb-32 flex flex-col md:flex-row items-start md:items-center">
-            <div class="md:w-1/2 md:pr-24 text-right order-3 md:order-1"><span class="text-4xl font-black font-headline text-outline-variant/30">JUN 2023</span></div>
+        <div class="relative mb-16 md:mb-32 flex flex-col md:flex-row items-start md:items-center">
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pr-24 text-right order-3 md:order-1"><span class="text-2xl md:text-4xl font-black font-headline text-outline-variant/30">JUN 2023</span></div>
             <div class="absolute left-8 md:left-1/2 w-12 h-12 bg-secondary rounded-full -translate-x-1/2 flex items-center justify-center z-10 ring-8 ring-background order-1 md:order-2">
                 <span class="material-symbols-outlined text-white">workspace_premium</span>
             </div>
-            <div class="md:w-1/2 md:pl-24 order-2">
-                <h3 class="text-3xl font-bold font-headline">Data Scientist</h3>
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pl-24 order-2">
+                <h3 class="text-2xl md:text-3xl font-bold font-headline">Data Scientist</h3>
                 <p class="text-secondary font-bold text-lg mb-4">RBC Amplify</p>
                 <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary">
                     <p class="text-on-surface-variant leading-relaxed">Selected for the prestigious Amplify program. Built an award-winning H2O AutoML solution to predict customer churn with high precision.</p>
@@ -142,8 +142,8 @@
 
         <!-- Deloitte -->
         <div class="relative flex flex-col md:flex-row items-start md:items-center">
-            <div class="md:w-1/2 md:pr-24 text-left md:text-right order-2 md:order-1">
-                <h3 class="text-3xl font-bold font-headline">Software Engineer</h3>
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pr-24 text-left md:text-right order-2 md:order-1">
+                <h3 class="text-2xl md:text-3xl font-bold font-headline">Software Engineer</h3>
                 <p class="text-primary font-bold text-lg mb-4">Deloitte</p>
                 <div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-outline-variant/10">
                     <p class="text-on-surface-variant leading-relaxed">Engineered robust CI/CD pipelines for large-scale FinTech applications. Backend stability, automated testing, and cloud infrastructure for high-availability systems.</p>
@@ -157,7 +157,7 @@
             <div class="absolute left-8 md:left-1/2 w-12 h-12 bg-surface-container-highest border-4 border-outline-variant rounded-full -translate-x-1/2 flex items-center justify-center z-10 ring-8 ring-background order-1 md:order-2">
                 <span class="material-symbols-outlined text-outline">terminal</span>
             </div>
-            <div class="md:w-1/2 md:pl-24 order-3"><span class="text-4xl font-black font-headline text-outline-variant/30">MAR 2021</span></div>
+            <div class="pl-16 md:pl-0 md:w-1/2 md:pl-24 order-3"><span class="text-2xl md:text-4xl font-black font-headline text-outline-variant/30">MAR 2021</span></div>
         </div>
     </div>
 </main>

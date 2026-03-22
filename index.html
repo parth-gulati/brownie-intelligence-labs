@@ -52,6 +52,7 @@
             font-family: 'Space Grotesk', sans-serif;
             color: #2d2f2a;
         }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .blueprint-sketch {
             clip-path: polygon(2% 0%, 98% 1%, 100% 4%, 99% 96%, 97% 100%, 3% 99%, 0% 97%, 1% 3%);
         }
@@ -77,7 +78,7 @@
 <!-- Header -->
 <header class="bg-[#f1f1e9] flex justify-between items-center w-full px-4 md:px-8 py-4 md:py-6 max-w-full mx-auto fixed top-0 z-50">
     <a href="index.html" class="text-lg md:text-2xl font-black text-[#2d2f2a] italic font-headline tracking-tight">
-        BIL
+        <span class="md:hidden">BIL</span><span class="hidden md:inline">Brownie Intelligence Labs</span>
     </a>
     <nav class="flex items-center gap-4 md:gap-10">
         <a class="text-[#006b15] font-bold border-b-2 border-[#006b15] pb-1 font-body text-[10px] md:text-sm uppercase tracking-widest" href="index.html">Labs</a>
@@ -90,14 +91,14 @@
 <main class="pt-24">
 
 <!-- Hero -->
-<section class="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
+<section class="min-h-screen flex flex-col items-center justify-center px-4 md:px-6 relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none opacity-10">
         <div class="h-full w-px bg-outline absolute left-1/4"></div>
         <div class="h-full w-px bg-outline absolute left-3/4"></div>
         <div class="w-full h-px bg-outline absolute top-1/3"></div>
     </div>
     <div class="z-10 text-center max-w-4xl mx-auto">
-        <h1 class="font-headline text-6xl md:text-8xl font-extrabold text-on-background tracking-tighter leading-none mb-6">
+        <h1 class="font-headline text-4xl md:text-6xl lg:text-8xl font-extrabold text-on-background tracking-tighter leading-none mb-6">
             We build software<br/>with a <span class="text-primary italic">soul.</span>
         </h1>
         <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
@@ -107,11 +108,11 @@
                 We are crafting innovative software solutions that bridge the gap between human intuition and machine logic.
             </p>
         </div>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="#labs" class="bg-primary text-on-primary px-10 py-4 font-headline font-bold text-xl blueprint-sketch neon-glow-green hover:scale-105 transition-transform">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+            <a href="#labs" class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 font-headline font-bold text-xl blueprint-sketch neon-glow-green hover:scale-105 transition-transform text-center">
                 Explore Labs
             </a>
-            <a href="#connect" class="border-2 border-secondary text-secondary px-10 py-4 font-headline font-bold text-xl blueprint-sketch hover:bg-secondary-container transition-colors">
+            <a href="#connect" class="w-full md:w-auto border-2 border-secondary text-secondary px-10 py-4 font-headline font-bold text-xl blueprint-sketch hover:bg-secondary-container transition-colors text-center">
                 Get in Touch
             </a>
         </div>
@@ -124,7 +125,7 @@
 </section>
 
 <!-- Featured Project: Vira -->
-<section id="labs" class="py-32 px-6 bg-surface-container-low">
+<section id="labs" class="py-16 md:py-32 px-4 md:px-6 bg-surface-container-low">
     <div class="max-w-6xl mx-auto">
         <div class="mb-16">
             <span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-primary">01 / Featured Project</span>
@@ -132,44 +133,52 @@
                 Vīra: Your workout data,<br/><span class="italic underline decoration-wavy decoration-primary-container">your way.</span>
             </h2>
         </div>
-        <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
                 <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-xl">
                     A privacy-first workout tracker built for lifters who care about their data. Track every rep, set, and PR — all stored locally on your device. No accounts, no cloud, no tracking.
                 </p>
                 <div class="mt-12 grid grid-cols-2 gap-8">
                     <div class="border-l-2 border-primary-container pl-6">
-                        <div class="font-headline text-3xl font-black">100+</div>
+                        <div class="font-headline text-2xl md:text-3xl font-black">100+</div>
                         <div class="font-label text-[10px] uppercase tracking-widest text-outline">Exercises</div>
                     </div>
                     <div class="border-l-2 border-secondary pl-6">
-                        <div class="font-headline text-3xl font-black">5</div>
+                        <div class="font-headline text-2xl md:text-3xl font-black">5</div>
                         <div class="font-label text-[10px] uppercase tracking-widest text-outline">Accent Themes</div>
                     </div>
                     <div class="border-l-2 border-tertiary pl-6">
-                        <div class="font-headline text-3xl font-black">0</div>
+                        <div class="font-headline text-2xl md:text-3xl font-black">0</div>
                         <div class="font-label text-[10px] uppercase tracking-widest text-outline">Data Collected</div>
                     </div>
                     <div class="border-l-2 border-primary pl-6">
-                        <div class="font-headline text-3xl font-black">Free</div>
+                        <div class="font-headline text-2xl md:text-3xl font-black">Free</div>
                         <div class="font-label text-[10px] uppercase tracking-widest text-outline">Forever</div>
                     </div>
                 </div>
-                <div class="mt-12 flex gap-4">
-                    <a href="https://viira.in" class="group flex items-center gap-4 bg-on-background text-surface px-8 py-4 blueprint-sketch font-headline font-bold uppercase tracking-widest hover:bg-primary transition-colors">
+                <div class="mt-12">
+                    <a href="https://viira.in" class="group flex items-center justify-center md:inline-flex gap-4 w-full md:w-auto bg-on-background text-surface px-8 py-4 blueprint-sketch font-headline font-bold uppercase tracking-widest hover:bg-primary transition-colors">
                         Learn More
                         <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
                     </a>
                 </div>
             </div>
             <div class="space-y-4">
-                <!-- Screenshot Gallery -->
-                <div class="flex gap-3 overflow-x-auto pb-2" id="screenshots">
-                    <img src="screenshots/1.png" alt="Vīra dashboard" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest" onerror="document.getElementById('screenshots').style.display='none'"/>
-                    <img src="screenshots/2.png" alt="Vīra workout" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest"/>
-                    <img src="screenshots/3.png" alt="Vīra analytics" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest"/>
-                    <img src="screenshots/4.png" alt="Vīra templates" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest"/>
-                    <img src="screenshots/5.png" alt="Vīra themes" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest"/>
+                <!-- Screenshot Marquee -->
+                <div class="overflow-hidden relative" onmouseenter="this.querySelector('.marquee-track').style.animationPlayState='paused'" onmouseleave="this.querySelector('.marquee-track').style.animationPlayState='running'">
+                    <div class="flex gap-4 marquee-track" style="animation: marquee 20s linear infinite;">
+                        <img src="screenshots/1.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <img src="screenshots/2.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <img src="screenshots/3.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <img src="screenshots/4.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <img src="screenshots/5.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <!-- Duplicate for seamless loop -->
+                        <img src="screenshots/1.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <img src="screenshots/2.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <img src="screenshots/3.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <img src="screenshots/4.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                        <img src="screenshots/5.png" alt="Vīra" class="h-64 md:h-80 rounded-lg border border-outline-variant/20 shadow-sm flex-shrink-0"/>
+                    </div>
                 </div>
                 <div class="bg-surface-container-highest p-6 sketch-border">
                     <div class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">Features</div>
@@ -199,7 +208,7 @@
 </section>
 
 <!-- Tech Stack -->
-<section id="stack" class="py-32 px-6 bg-surface-container-highest">
+<section id="stack" class="py-16 md:py-32 px-4 md:px-6 bg-surface-container-highest">
     <div class="max-w-5xl mx-auto text-center">
         <div class="mb-16">
             <span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-secondary">02 / Tooling</span>
@@ -243,7 +252,7 @@
 </section>
 
 <!-- Connect -->
-<section id="connect" class="py-32 px-6 relative overflow-hidden">
+<section id="connect" class="py-16 md:py-32 px-4 md:px-6 relative overflow-hidden">
     <div class="absolute -right-48 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
         <span class="material-symbols-outlined text-[600px]">architecture</span>
     </div>

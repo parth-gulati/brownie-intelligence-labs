@@ -29,10 +29,10 @@
         body { background-color: #f7f7ef; }
     </style>
 </head>
-<body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
 
 <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-4 bg-[#f1f1e9]">
-    <a href="index.html" class="text-lg md:text-2xl font-bold tracking-tighter text-stone-800 font-headline">BIL</a>
+    <a href="index.html" class="text-lg md:text-2xl font-bold tracking-tighter text-stone-800 font-headline"><span class="md:hidden">BIL</span><span class="hidden md:inline">Brownie Intelligence Labs</span></a>
     <div class="flex items-center gap-4 md:gap-12">
         <a class="text-stone-500 font-medium font-label text-[10px] md:text-xs uppercase tracking-widest hover:text-purple-500 transition-colors" href="index.html">Labs</a>
         <a class="text-stone-500 font-medium font-label text-[10px] md:text-xs uppercase tracking-widest hover:text-purple-500 transition-colors" href="journey.html">Journey</a>
@@ -41,7 +41,7 @@
     </div>
 </nav>
 
-<main class="pt-32 pb-20 px-8 min-h-screen blueprint-grid relative overflow-hidden">
+<main class="pt-32 pb-20 px-4 md:px-8 min-h-screen blueprint-grid relative overflow-hidden">
     <div class="absolute top-40 right-10 opacity-10 pointer-events-none transform rotate-12">
         <span class="material-symbols-outlined text-[12rem]">architecture</span>
     </div>
@@ -51,7 +51,7 @@
         <div class="lg:col-span-5 space-y-12">
             <div class="space-y-4">
                 <span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-secondary">Phase 01: Contact</span>
-                <h1 class="font-headline text-6xl md:text-7xl font-extrabold leading-tight tracking-tighter text-on-surface">
+                <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tighter text-on-surface">
                     Draft Your<br/>Next <span class="text-primary italic">Project</span>.
                 </h1>
             </div>
@@ -85,11 +85,11 @@
                 <div class="space-y-6">
                     <div class="group relative">
                         <label class="font-label text-[10px] uppercase tracking-[0.2em] text-outline">0.1 Collaborator Name</label>
-                        <input class="w-full bg-transparent border-0 border-b-2 border-outline-variant/20 focus:ring-0 focus:border-primary px-0 py-3 font-headline text-2xl placeholder:text-outline-variant/30 outline-none" placeholder="Who are you?" type="text" name="name"/>
+                        <input class="w-full bg-transparent border-0 border-b-2 border-outline-variant/20 focus:ring-0 focus:border-primary px-0 py-3 font-headline text-xl md:text-2xl placeholder:text-outline-variant/30 outline-none" placeholder="Who are you?" type="text" name="name"/>
                     </div>
                     <div class="group relative">
                         <label class="font-label text-[10px] uppercase tracking-[0.2em] text-outline">0.2 Contact Vector</label>
-                        <input class="w-full bg-transparent border-0 border-b-2 border-outline-variant/20 focus:ring-0 focus:border-primary px-0 py-3 font-headline text-2xl placeholder:text-outline-variant/30 outline-none" placeholder="email@address.com" type="email" name="email"/>
+                        <input class="w-full bg-transparent border-0 border-b-2 border-outline-variant/20 focus:ring-0 focus:border-primary px-0 py-3 font-headline text-xl md:text-2xl placeholder:text-outline-variant/30 outline-none" placeholder="email@address.com" type="email" name="email"/>
                     </div>
                     <div class="group relative">
                         <label class="font-label text-[10px] uppercase tracking-[0.2em] text-outline">0.3 Project Brief</label>
@@ -101,7 +101,7 @@
                         <span class="material-symbols-outlined text-sm">draw</span>
                         <span class="font-label text-[10px] uppercase tracking-widest">System Ready</span>
                     </div>
-                    <button type="button" onclick="this.textContent='Coming Soon'" class="group relative px-10 py-5 bg-primary overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(0,107,21,0.3)] active:scale-[0.98] rounded-xl font-label text-sm font-black uppercase tracking-[0.2em] text-on-primary">Initialize Connection</button>
+                    <button type="button" onclick="this.textContent='Coming Soon'" class="group relative w-full md:w-auto px-10 py-5 bg-primary overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(0,107,21,0.3)] active:scale-[0.98] rounded-xl font-label text-sm font-black uppercase tracking-[0.2em] text-on-primary">Initialize Connection</button>
                 </div>
             </form>
         </div>

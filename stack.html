@@ -28,10 +28,10 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     </style>
 </head>
-<body class="font-body text-on-surface antialiased">
+<body class="font-body text-on-surface antialiased overflow-x-hidden">
 
 <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-8 py-4 bg-[#f1f1e9]">
-    <a href="index.html" class="text-lg md:text-2xl font-bold tracking-tighter text-stone-800 font-headline">BIL</a>
+    <a href="index.html" class="text-lg md:text-2xl font-bold tracking-tighter text-stone-800 font-headline"><span class="md:hidden">BIL</span><span class="hidden md:inline">Brownie Intelligence Labs</span></a>
     <div class="flex items-center gap-4 md:gap-12">
         <a class="text-stone-500 font-medium font-label uppercase tracking-widest text-[10px] md:text-xs hover:text-purple-500 transition-colors" href="index.html">Labs</a>
         <a class="text-stone-500 font-medium font-label uppercase tracking-widest text-[10px] md:text-xs hover:text-purple-500 transition-colors" href="journey.html">Journey</a>
@@ -40,10 +40,10 @@
     </div>
 </nav>
 
-<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<main class="pt-32 pb-24 px-4 md:px-8 max-w-7xl mx-auto overflow-x-hidden">
     <header class="mb-20 space-y-4">
         <div class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 font-label text-xs uppercase tracking-widest mb-4">v2.0 // SYSTEM_CORE</div>
-        <h1 class="text-6xl md:text-8xl font-black font-headline text-on-surface tracking-tighter leading-none">The <span class="text-primary italic">Blueprint</span> Stack</h1>
+        <h1 class="text-4xl md:text-6xl lg:text-8xl font-black font-headline text-on-surface tracking-tighter leading-none">The <span class="text-primary italic">Blueprint</span> Stack</h1>
         <p class="max-w-2xl text-xl font-body text-on-surface-variant leading-relaxed">A visual mapping of the technical arsenal we use to build the future. Precision engineered for intelligence.</p>
     </header>
 
@@ -55,7 +55,7 @@
                 <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">neurology</span>
                 <h2 class="text-3xl font-bold font-headline uppercase tracking-tight">AI/ML & GenAI</h2>
             </div>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-surface-container-lowest p-6 sketch-border hover:border-primary transition-colors group">
                     <div class="flex justify-between items-start mb-4"><span class="material-symbols-outlined text-primary group-hover:rotate-12 transition-transform">memory</span><span class="text-[10px] font-label text-outline uppercase">PROD_READY</span></div>
                     <h3 class="font-bold text-lg mb-1">PyTorch</h3><p class="text-xs text-on-surface-variant font-label mb-4 opacity-70">Neural Network Engine</p>
@@ -105,7 +105,7 @@
                 <span class="px-4 py-2 bg-surface-container-lowest font-label text-xs uppercase tracking-widest border border-outline-variant/20 hover:bg-primary-container hover:text-on-primary-container transition-all cursor-pointer">Kubernetes</span>
                 <span class="px-4 py-2 bg-surface-container-lowest font-label text-xs uppercase tracking-widest border border-outline-variant/20 hover:bg-primary-container hover:text-on-primary-container transition-all cursor-pointer">Terraform</span>
             </div>
-            <div class="mt-8 p-4 bg-on-surface text-surface text-[10px] font-label opacity-90 rounded">
+            <div class="mt-8 p-4 bg-on-surface text-surface text-[10px] font-label opacity-90 rounded overflow-x-auto">
                 <div class="flex gap-2 text-primary"><span>&gt;</span><span>DEPLOYING CLUSTER...</span></div>
                 <div class="opacity-50 mt-1">Status: OK [0.003ms]</div>
             </div>
