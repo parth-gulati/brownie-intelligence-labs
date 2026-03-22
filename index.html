@@ -75,15 +75,15 @@
 <body class="bg-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
 
 <!-- Header -->
-<header class="bg-[#f1f1e9] flex justify-between items-center w-full px-8 py-6 max-w-full mx-auto fixed top-0 z-50">
-    <div class="text-2xl font-black text-[#2d2f2a] italic font-headline tracking-tight">
-        Brownie Intelligence Labs
-    </div>
-    <nav class="hidden md:flex items-center gap-10">
-        <a class="text-[#006b15] font-bold border-b-2 border-[#006b15] pb-1 font-body text-sm uppercase tracking-widest" href="index.html">Labs</a>
-        <a class="text-[#2d2f2a] font-medium hover:text-[#00fc40] hover:scale-105 transition-all font-body text-sm uppercase tracking-widest" href="journey.html">Journey</a>
-        <a class="text-[#2d2f2a] font-medium hover:text-[#00fc40] hover:scale-105 transition-all font-body text-sm uppercase tracking-widest" href="stack.html">Stack</a>
-        <a class="text-[#2d2f2a] font-medium hover:text-[#00fc40] hover:scale-105 transition-all font-body text-sm uppercase tracking-widest" href="connect.html">Connect</a>
+<header class="bg-[#f1f1e9] flex justify-between items-center w-full px-4 md:px-8 py-4 md:py-6 max-w-full mx-auto fixed top-0 z-50">
+    <a href="index.html" class="text-lg md:text-2xl font-black text-[#2d2f2a] italic font-headline tracking-tight">
+        BIL
+    </a>
+    <nav class="flex items-center gap-4 md:gap-10">
+        <a class="text-[#006b15] font-bold border-b-2 border-[#006b15] pb-1 font-body text-[10px] md:text-sm uppercase tracking-widest" href="index.html">Labs</a>
+        <a class="text-[#2d2f2a] font-medium hover:text-[#00fc40] transition-all font-body text-[10px] md:text-sm uppercase tracking-widest" href="journey.html">Journey</a>
+        <a class="text-[#2d2f2a] font-medium hover:text-[#00fc40] transition-all font-body text-[10px] md:text-sm uppercase tracking-widest" href="stack.html">Stack</a>
+        <a class="text-[#2d2f2a] font-medium hover:text-[#00fc40] transition-all font-body text-[10px] md:text-sm uppercase tracking-widest" href="connect.html">Connect</a>
     </nav>
 </header>
 
@@ -164,12 +164,12 @@
             </div>
             <div class="space-y-4">
                 <!-- Screenshot Gallery -->
-                <div class="flex gap-3 overflow-x-auto pb-2">
-                    <img src="screenshots/1.png" alt="Vīra dashboard" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm"/>
-                    <img src="screenshots/2.png" alt="Vīra workout" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm"/>
-                    <img src="screenshots/3.png" alt="Vīra analytics" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm"/>
-                    <img src="screenshots/4.png" alt="Vīra templates" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm"/>
-                    <img src="screenshots/5.png" alt="Vīra themes" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm"/>
+                <div class="flex gap-3 overflow-x-auto pb-2" id="screenshots">
+                    <img src="screenshots/1.png" alt="Vīra dashboard" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest" onerror="document.getElementById('screenshots').style.display='none'"/>
+                    <img src="screenshots/2.png" alt="Vīra workout" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest"/>
+                    <img src="screenshots/3.png" alt="Vīra analytics" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest"/>
+                    <img src="screenshots/4.png" alt="Vīra templates" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest"/>
+                    <img src="screenshots/5.png" alt="Vīra themes" class="h-64 rounded-lg border border-outline-variant/20 shadow-sm bg-surface-container-highest"/>
                 </div>
                 <div class="bg-surface-container-highest p-6 sketch-border">
                     <div class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">Features</div>
@@ -257,9 +257,9 @@
             <p class="font-body text-xl text-on-surface-variant mb-8">
                 We're currently heads-down building. Reach out and let's talk.
             </p>
-            <a href="mailto:viirasupport@gmail.com" class="bg-on-background text-surface px-16 py-5 font-headline font-black text-xl blueprint-sketch hover:bg-secondary hover:text-on-secondary transition-all inline-block">
+            <button onclick="this.textContent='Coming Soon'" class="bg-on-background text-surface px-16 py-5 font-headline font-black text-xl blueprint-sketch hover:bg-secondary hover:text-on-secondary transition-all">
                 Initialize Connection
-            </a>
+            </button>
         </div>
     </div>
 </section>
