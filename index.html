@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Brownie Intelligence Labs | Digital Blueprint</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#006b15",
+              "primary-container": "#00fc40",
+              "on-primary": "#d1ffc6",
+              "on-primary-container": "#005a10",
+              "secondary": "#8c00d8",
+              "secondary-container": "#e9c4ff",
+              "on-secondary": "#fceeff",
+              "tertiary": "#00666e",
+              "tertiary-container": "#0eeafd",
+              "surface": "#f7f7ef",
+              "surface-container": "#e8e9e0",
+              "surface-container-low": "#f1f1e9",
+              "surface-container-high": "#e2e3da",
+              "surface-container-highest": "#dcded4",
+              "on-background": "#2d2f2a",
+              "on-surface": "#2d2f2a",
+              "on-surface-variant": "#5b5c56",
+              "outline": "#767771",
+              "outline-variant": "#adaea6",
+              "error": "#b02500",
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-color: #f7f7ef;
+            background-image:
+                radial-gradient(#adaea6 0.5px, transparent 0.5px),
+                linear-gradient(rgba(247, 247, 239, 0.98), rgba(247, 247, 239, 0.98));
+            background-size: 24px 24px, auto;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #2d2f2a;
+        }
+        .blueprint-sketch {
+            clip-path: polygon(2% 0%, 98% 1%, 100% 4%, 99% 96%, 97% 100%, 3% 99%, 0% 97%, 1% 3%);
+        }
+        .sketch-border {
+            border: 2px solid rgba(173, 174, 166, 0.3);
+            border-radius: 2px;
+            position: relative;
+        }
+        .sketch-border::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 1px solid rgba(173, 174, 166, 0.15);
+            pointer-events: none;
+        }
+        .neon-glow-green { box-shadow: 0 0 15px rgba(0, 252, 64, 0.2); }
+        .neon-glow-purple { box-shadow: 0 0 15px rgba(140, 0, 216, 0.15); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+
+<!-- Header -->
+<header class="bg-[#f1f1e9] flex justify-between items-center w-full px-8 py-6 max-w-full mx-auto fixed top-0 z-50">
+    <div class="text-2xl font-black text-[#2d2f2a] italic font-headline tracking-tight">
+        Brownie Intelligence Labs
+    </div>
+    <nav class="hidden md:flex items-center gap-10">
+        <a class="text-[#006b15] font-bold border-b-2 border-[#006b15] pb-1 font-body text-sm uppercase tracking-widest" href="#labs">Labs</a>
+        <a class="text-[#2d2f2a] font-medium hover:text-[#00fc40] hover:scale-105 transition-all font-body text-sm uppercase tracking-widest" href="#stack">Stack</a>
+        <a class="text-[#2d2f2a] font-medium hover:text-[#00fc40] hover:scale-105 transition-all font-body text-sm uppercase tracking-widest" href="#connect">Connect</a>
+    </nav>
+</header>
+
+<main class="pt-24">
+
+<!-- Hero -->
+<section class="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none opacity-10">
+        <div class="h-full w-px bg-outline absolute left-1/4"></div>
+        <div class="h-full w-px bg-outline absolute left-3/4"></div>
+        <div class="w-full h-px bg-outline absolute top-1/3"></div>
+    </div>
+    <div class="z-10 text-center max-w-4xl mx-auto">
+        <h1 class="font-headline text-6xl md:text-8xl font-extrabold text-on-background tracking-tighter leading-none mb-6">
+            We build software<br/>with a <span class="text-primary italic">soul.</span>
+        </h1>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
+            <span class="bg-surface-container-highest px-4 py-1 font-label text-xs uppercase tracking-widest text-on-surface-variant">Toronto, Canada</span>
+            <div class="h-px w-8 bg-outline-variant hidden md:block"></div>
+            <p class="font-body text-lg text-on-surface max-w-lg">
+                We are crafting innovative software solutions that bridge the gap between human intuition and machine logic.
+            </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="#labs" class="bg-primary text-on-primary px-10 py-4 font-headline font-bold text-xl blueprint-sketch neon-glow-green hover:scale-105 transition-transform">
+                Explore Labs
+            </a>
+            <a href="#connect" class="border-2 border-secondary text-secondary px-10 py-4 font-headline font-bold text-xl blueprint-sketch hover:bg-secondary-container transition-colors">
+                Get in Touch
+            </a>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-10 hidden xl:block text-[10px] font-label text-outline-variant uppercase leading-loose">
+        <div>Project_Ref: BIL_2026_01</div>
+        <div>Status: Building</div>
+        <div>Coordinate: 43.6532° N, 79.3832° W</div>
+    </div>
+</section>
+
+<!-- Featured Project: Vira -->
+<section id="labs" class="py-32 px-6 bg-surface-container-low">
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-16">
+            <span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-primary">01 / Featured Project</span>
+            <h2 class="font-headline text-5xl font-extrabold mt-4 leading-tight">
+                Vīra: Your workout data,<br/><span class="italic underline decoration-wavy decoration-primary-container">your way.</span>
+            </h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div>
+                <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                    A privacy-first workout tracker built for lifters who care about their data. Track every rep, set, and PR — all stored locally on your device. No accounts, no cloud, no tracking.
+                </p>
+                <div class="mt-12 grid grid-cols-2 gap-8">
+                    <div class="border-l-2 border-primary-container pl-6">
+                        <div class="font-headline text-3xl font-black">100+</div>
+                        <div class="font-label text-[10px] uppercase tracking-widest text-outline">Exercises</div>
+                    </div>
+                    <div class="border-l-2 border-secondary pl-6">
+                        <div class="font-headline text-3xl font-black">5</div>
+                        <div class="font-label text-[10px] uppercase tracking-widest text-outline">Accent Themes</div>
+                    </div>
+                    <div class="border-l-2 border-tertiary pl-6">
+                        <div class="font-headline text-3xl font-black">0</div>
+                        <div class="font-label text-[10px] uppercase tracking-widest text-outline">Data Collected</div>
+                    </div>
+                    <div class="border-l-2 border-primary pl-6">
+                        <div class="font-headline text-3xl font-black">Free</div>
+                        <div class="font-label text-[10px] uppercase tracking-widest text-outline">Forever</div>
+                    </div>
+                </div>
+                <div class="mt-12 flex gap-4">
+                    <a href="https://viira.in" class="group flex items-center gap-4 bg-on-background text-surface px-8 py-4 blueprint-sketch font-headline font-bold uppercase tracking-widest hover:bg-primary transition-colors">
+                        Learn More
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-surface-container-highest p-6 sketch-border">
+                    <div class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">Features</div>
+                    <ul class="font-body text-sm text-on-surface-variant space-y-2">
+                        <li>• PR detection with animated trend charts</li>
+                        <li>• GitHub-style workout heatmap</li>
+                        <li>• Volume & Time Under Tension analytics</li>
+                        <li>• Supersets, tempo tracking, set tags</li>
+                        <li>• Import/export via CSV (170+ exercise mappings)</li>
+                        <li>• Weekly insights and smart dashboard</li>
+                    </ul>
+                </div>
+                <div class="bg-surface-container-highest p-6 sketch-border">
+                    <div class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">Tech Stack</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface px-3 py-1 font-label text-xs uppercase tracking-wider">Flutter</span>
+                        <span class="bg-surface px-3 py-1 font-label text-xs uppercase tracking-wider">Dart</span>
+                        <span class="bg-surface px-3 py-1 font-label text-xs uppercase tracking-wider">SQLite</span>
+                        <span class="bg-surface px-3 py-1 font-label text-xs uppercase tracking-wider">Drift ORM</span>
+                        <span class="bg-surface px-3 py-1 font-label text-xs uppercase tracking-wider">BLoC</span>
+                        <span class="bg-surface px-3 py-1 font-label text-xs uppercase tracking-wider">CustomPaint</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="stack" class="py-32 px-6 bg-surface-container-highest">
+    <div class="max-w-5xl mx-auto text-center">
+        <div class="mb-16">
+            <span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-secondary">02 / Tooling</span>
+            <h2 class="font-headline text-4xl font-bold mt-2 uppercase">The Blueprint Stack</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-0.5 bg-outline-variant/10">
+            <div class="bg-surface py-12 flex flex-col items-center group transition-colors hover:bg-primary-container/10">
+                <span class="material-symbols-outlined text-4xl mb-4 group-hover:scale-110 transition-transform">code</span>
+                <div class="font-label text-[11px] font-bold uppercase tracking-widest">Python</div>
+            </div>
+            <div class="bg-surface py-12 flex flex-col items-center group transition-colors hover:bg-secondary-container/20">
+                <span class="material-symbols-outlined text-4xl mb-4 group-hover:scale-110 transition-transform">memory</span>
+                <div class="font-label text-[11px] font-bold uppercase tracking-widest">PyTorch</div>
+            </div>
+            <div class="bg-surface py-12 flex flex-col items-center group transition-colors hover:bg-primary-container/10">
+                <span class="material-symbols-outlined text-4xl mb-4 group-hover:scale-110 transition-transform">smartphone</span>
+                <div class="font-label text-[11px] font-bold uppercase tracking-widest">Flutter</div>
+            </div>
+            <div class="bg-surface py-12 flex flex-col items-center group transition-colors hover:bg-secondary-container/20">
+                <span class="material-symbols-outlined text-4xl mb-4 group-hover:scale-110 transition-transform">terminal</span>
+                <div class="font-label text-[11px] font-bold uppercase tracking-widest">React.js</div>
+            </div>
+            <div class="bg-surface py-12 flex flex-col items-center group transition-colors hover:bg-primary-container/10">
+                <span class="material-symbols-outlined text-4xl mb-4 group-hover:scale-110 transition-transform">database</span>
+                <div class="font-label text-[11px] font-bold uppercase tracking-widest">PostgreSQL</div>
+            </div>
+            <div class="bg-surface py-12 flex flex-col items-center group transition-colors hover:bg-secondary-container/20">
+                <span class="material-symbols-outlined text-4xl mb-4 group-hover:scale-110 transition-transform">cloud</span>
+                <div class="font-label text-[11px] font-bold uppercase tracking-widest">AWS Cloud</div>
+            </div>
+            <div class="bg-surface py-12 flex flex-col items-center group transition-colors hover:bg-primary-container/10">
+                <span class="material-symbols-outlined text-4xl mb-4 group-hover:scale-110 transition-transform">view_in_ar</span>
+                <div class="font-label text-[11px] font-bold uppercase tracking-widest">TensorFlow</div>
+            </div>
+            <div class="bg-surface py-12 flex flex-col items-center group transition-colors hover:bg-secondary-container/20">
+                <span class="material-symbols-outlined text-4xl mb-4 group-hover:scale-110 transition-transform">rocket_launch</span>
+                <div class="font-label text-[11px] font-bold uppercase tracking-widest">Docker</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Connect -->
+<section id="connect" class="py-32 px-6 relative overflow-hidden">
+    <div class="absolute -right-48 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
+        <span class="material-symbols-outlined text-[600px]">architecture</span>
+    </div>
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-primary">03 / Contact</span>
+            <h2 class="font-headline text-5xl font-black mt-4">Draft Your Next Project</h2>
+            <p class="mt-4 font-body text-on-surface-variant">We are crafting solutions that survive the hype cycle. Let's build together.</p>
+        </div>
+        <div class="bg-surface p-12 sketch-border relative z-10 neon-glow-purple text-center">
+            <p class="font-body text-xl text-on-surface-variant mb-8">
+                We're currently heads-down building. Reach out and let's talk.
+            </p>
+            <a href="mailto:viirasupport@gmail.com" class="bg-on-background text-surface px-16 py-5 font-headline font-black text-xl blueprint-sketch hover:bg-secondary hover:text-on-secondary transition-all inline-block">
+                Initialize Connection
+            </a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#f7f7ef] py-12 border-t-0 flex flex-col md:flex-row justify-between items-center px-12 w-full gap-4">
+    <div class="text-lg font-bold text-[#2d2f2a] font-headline italic">
+        Brownie Intelligence Labs
+    </div>
+    <div class="font-mono text-sm uppercase tracking-widest text-[#adaea6]">
+        &copy; 2026 Brownie Intelligence Labs. Crafted with intelligence.
+    </div>
+</footer>
+
+</body>
+</html>
